@@ -1,0 +1,190 @@
+fileFormatVersion: 2
+guid: 7f1c978f2f67b7445a2cf72aab5f999c
+timeCreated: 1524336623
+licenseType: Free
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: ' 1'
+    100002: _1
+    100004: _2
+    100006: _3
+    100008: brick_whole
+    100010: brick_whole_2
+    100012: //RootNode
+    100014: tank_body
+    100016: tank_guide
+    100018: track_0
+    100020: track_1
+    100022: track_2
+    100024: track_3
+    100026: turret
+    100028: shard_0
+    100030: shard_2
+    100032: shard_1
+    100034: shard_3
+    100036: shard_4
+    100038: Box
+    100040: bullet
+    400000: ' 1'
+    400002: _1
+    400004: _2
+    400006: _3
+    400008: brick_whole
+    400010: brick_whole_2
+    400012: //RootNode
+    400014: tank_body
+    400016: tank_guide
+    400018: track_0
+    400020: track_1
+    400022: track_2
+    400024: track_3
+    400026: turret
+    400028: shard_0
+    400030: shard_2
+    400032: shard_1
+    400034: shard_3
+    400036: shard_4
+    400038: Box
+    400040: bullet
+    2100000: No Name
+    2300000: ' 1'
+    2300002: _1
+    2300004: _2
+    2300006: _3
+    2300008: brick_whole
+    2300010: brick_whole_2
+    2300012: tank_body
+    2300014: tank_guide
+    2300016: track_0
+    2300018: track_1
+    2300020: track_2
+    2300022: track_3
+    2300024: turret
+    2300026: shard_0
+    2300028: shard_2
+    2300030: shard_1
+    2300032: shard_3
+    2300034: shard_4
+    2300036: Box
+    2300038: bullet
+    3300000: ' 1'
+    3300002: _1
+    3300004: _2
+    3300006: _3
+    3300008: brick_whole
+    3300010: brick_whole_2
+    3300012: tank_body
+    3300014: tank_guide
+    3300016: track_0
+    3300018: track_1
+    3300020: track_2
+    3300022: track_3
+    3300024: turret
+    3300026: shard_0
+    3300028: shard_2
+    3300030: shard_1
+    3300032: shard_3
+    3300034: shard_4
+    3300036: Box
+    3300038: bullet
+    4300000: tank_guide
+    4300002: tank_body
+    4300004: track_1
+    4300006: track_0
+    4300008: track_2
+    4300010: track_3
+    4300012: turret
+    4300014: brick_whole
+    4300016: shard_4
+    4300018: _1
+    4300020: brick_whole_2
+    4300022: _2
+    4300024: _3
+    4300026: shard_0
+    4300028: shard_2
+    4300030: shard_3
+    4300032: shard_1
+    4300034: Box
+    4300036: bullet
+    9500000: //RootNode
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 0.0625
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
