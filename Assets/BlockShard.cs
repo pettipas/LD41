@@ -4,13 +4,8 @@ using UnityEngine;
 
 public class BlockShard : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+    public float hits = 3;
+
+    public Color color;
+    
 }

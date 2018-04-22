@@ -16,6 +16,16 @@ public class Tank : MonoBehaviour {
     public float spinOutDuration = 1.0f;
     public CharacterController controller;
     public GameZone zone;
+    public Launcher launcher;
+
+    public float coolDown;
+    public float timeBeforeNext = 0.3f;
+
+    public bool ReadyToShoot {
+        get {
+            return coolDown >= timeBeforeNext;
+        }
+    }
 
     public float AnimationSpeed {
         get {
@@ -60,5 +70,12 @@ public class Tank : MonoBehaviour {
 
         signOfLastSpeed = Mathf.Sign(x);
 
+        if (Input.GetKey(KeyCode.Space) && ReadyToShoot 
+            || Input.GetKeyDown(KeyCode.Space)) {
+            coolDown = 0;
+            launcher.Fire();
+        }
+
+        coolDown += Time.smoothDeltaTime;
     }
 }

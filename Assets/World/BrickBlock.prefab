@@ -23,12 +23,12 @@ GameObject:
   - component: {fileID: 23048341067945824}
   - component: {fileID: 114775862255591146}
   - component: {fileID: 65000868313806584}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: shard_4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!1 &1520210349460082
 GameObject:
@@ -38,12 +38,12 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4816641393508920}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: transformer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!1 &1522240966585248
 GameObject:
@@ -57,12 +57,12 @@ GameObject:
   - component: {fileID: 23784037385602302}
   - component: {fileID: 114112341194005360}
   - component: {fileID: 65331066237462128}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: shard_3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!1 &1532476935814764
 GameObject:
@@ -76,12 +76,12 @@ GameObject:
   - component: {fileID: 23677370078486060}
   - component: {fileID: 114916701453788156}
   - component: {fileID: 65432902245096336}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: shard_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!1 &1577871044449434
 GameObject:
@@ -91,12 +91,12 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4117838713933660}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: BrickBlock
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!1 &1806625577062668
 GameObject:
@@ -110,12 +110,12 @@ GameObject:
   - component: {fileID: 23648715553635642}
   - component: {fileID: 114609340053275432}
   - component: {fileID: 65873703835670192}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: shard_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!1 &1823676157101532
 GameObject:
@@ -129,12 +129,12 @@ GameObject:
   - component: {fileID: 23577291441385994}
   - component: {fileID: 114843683068513618}
   - component: {fileID: 65644177767185758}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: shard_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &4117838713933660
 Transform:
@@ -143,7 +143,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1577871044449434}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -15.35, y: 0.125, z: 2.393}
+  m_LocalPosition: {x: -1, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4816641393508920}
@@ -210,7 +210,7 @@ Transform:
   m_GameObject: {fileID: 1520210349460082}
   m_LocalRotation: {x: -0, y: 1, z: -0, w: 0}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1, y: 2, z: 1}
   m_Children:
   - {fileID: 4130681870230852}
   - {fileID: 4802566022189704}
@@ -472,7 +472,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 0.25, z: 0.4375}
+  m_Size: {x: 1, y: 0.25, z: 0.3}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!65 &65644177767185758
 BoxCollider:
@@ -484,7 +484,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 0.25, z: 0.25}
+  m_Size: {x: 1, y: 0.25, z: 0.4}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!65 &65873703835670192
 BoxCollider:
