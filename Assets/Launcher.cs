@@ -23,6 +23,7 @@ public class Launcher : MonoBehaviour {
     public void Fire() {
         Projectile proj = projectilePrefab.Duplicate(launchPoint.position);
         projectiles.Add(proj);
+        proj.startPosition = this.transform.position; 
     }
 
     public void LateUpdate() {

@@ -87,6 +87,8 @@ public static class Extensions {
 
     public static T Detect<T>(this Component detector, Vector3 extents, LayerMask mask) where T : Component {
         Collider[] blocks = Physics.OverlapBox(detector.transform.position, extents / 2.0f, detector.transform.localRotation, mask);
+
+        
         foreach (Collider c in blocks) {
             if (c == null) {
                 continue;
@@ -97,6 +99,39 @@ public static class Extensions {
             }
         }
         return null;
+    }
+
+    public static T Detect<T>(this Component detector, Vector3 extents, LayerMask mask, Vector3 refPos) where T : Component {
+        Collider[] blocks = Physics.OverlapBox(detector.transform.position, extents / 2.0f, detector.transform.localRotation, mask);
+        if (blocks.Length == 0) {
+            return null;
+        }
+
+        T toReturn = null;
+
+        float closest = Vector3.Distance(blocks[0].transform.position, refPos);
+        T wantedTHing = blocks[0].GetComponent<T>();
+
+        if (wantedTHing != null) {
+            toReturn = wantedTHing;
+        }
+
+        foreach (Collider c in blocks) {
+
+            if (c == null) {
+                continue;
+            }
+
+            T comp = c.GetComponent<T>();
+            if (comp != null && comp.gameObject != detector.gameObject) {
+                float test = Vector3.Distance(c.transform.position, refPos);
+                if (test < closest) {
+                    toReturn = comp;
+                    closest = test;
+                }
+            }
+        }
+        return toReturn;
     }
 
     public static void SafeEnable<T>(this T mono) where T : MonoBehaviour {

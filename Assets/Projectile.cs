@@ -8,9 +8,10 @@ public class Projectile : MonoBehaviour {
     public float speed;
     public LayerMask blockMAsk;
     public Vector3 extents = new Vector3(0.1f, 0.1f, 0.1f);
+    public Vector3 startPosition;
     public void Update() {
         transform.position += direction * speed * Time.smoothDeltaTime;
-        BlockShard shard = this.Detect<BlockShard>(extents, blockMAsk);
+        BlockShard shard = this.Detect<BlockShard>(extents, blockMAsk, startPosition);
      
         if (shard != null) {
             Destroy(shard.gameObject);

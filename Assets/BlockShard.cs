@@ -5,7 +5,6 @@ using UnityEngine;
 public class BlockShard : MonoBehaviour {
 
     public float hits = 3;
-
-    public Color color;
-    
+    public Color hitOnce;
+ 
 }
