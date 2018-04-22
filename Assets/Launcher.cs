@@ -16,7 +16,7 @@ public class Launcher : MonoBehaviour {
                 projectiles = new List<Projectile>();
             }
 
-            return projectiles.Count != 3;
+            return projectiles.Count != 1;
         }
     }
 

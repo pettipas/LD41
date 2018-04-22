@@ -16,6 +16,8 @@ public class MarchingBehavior : MonoBehaviour {
     public GameObject positiveBumper;
     public LayerMask enemy;
 
+    public Projectile alienShot;
+
     public float duratiuon;
     public float countUpToDuration;
 
