@@ -1,4 +1,8 @@
 ﻿using UnityEngine;
+using System.Collections;
+using System.Collections.Generic;
+using System.Linq;
+
 
 public class MarchingBehavior : MonoBehaviour {
 
@@ -15,7 +19,16 @@ public class MarchingBehavior : MonoBehaviour {
     public float duratiuon;
     public float countUpToDuration;
 
+    public List<Walker> walkers = new List<Walker>();
+
+    public void Awake() {
+        walkers = GameObject.FindObjectsOfType<Walker>().ToList();
+    }
+
+    Vector3 velocityForDamp;
+
     public void Update() {
+
         if (countUpToDuration >= duratiuon) {
             countUpToDuration = 0;
             Walker negativeWalker = negativeBumper.Detect<Walker>(halfExtents, enemy);
@@ -25,20 +38,29 @@ public class MarchingBehavior : MonoBehaviour {
                 && signDirection < 0) {
 
                 signDirection *= -1;
-                transform.position += new Vector3(0, 0, stepdistance * -1);
+                Vector3 newPosition = transform.position + new Vector3(0, 0, stepdistance * -1);
+                transform.position = newPosition;
             }
             else if (positiveWalker != null
               && signDirection > 0) {
 
                 signDirection *= -1;
-                transform.position += new Vector3(0, 0, stepdistance * -1);
-
+                Vector3 newPosition = transform.position + new Vector3(0, 0, stepdistance * -1);
+                transform.position = newPosition;
             }
             else {
                 transform.position += new Vector3(stepdistance * signDirection, 0, 0);
+                for (int i = 0; i < walkers.Count; i++) {
+                    if (walkers[i] != null) walkers[i].TakeStep();
+                }
             }
         }
+
         countUpToDuration += Time.smoothDeltaTime;
+    }
+
+    public void LateUpdate() {
+        walkers.RemoveAll(x => x == null);
     }
 
     public void OnDrawGizmos() {

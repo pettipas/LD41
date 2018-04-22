@@ -15,12 +15,11 @@ public class Walker : MonoBehaviour {
         Exploding = true;
         Explosion explosionInstance = explosion.Duplicate(transform.position);
         explosionInstance.transform.SetParent(transform.parent);
+        Destroy(this.gameObject);
     }
 
-    public void TakeStep(bool step) {
-        if (step) {
-            stepOne.enabled = step;
-            stepTwo.enabled = !stepOne.enabled;
-        }
+    public void TakeStep() {
+        stepOne.enabled = !stepOne.enabled;
+        stepTwo.enabled = !stepOne.enabled;
     }
 }

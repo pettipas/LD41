@@ -86,7 +86,7 @@ public static class Extensions {
     }
 
     public static T Detect<T>(this GameObject detector, Vector3 extents, LayerMask mask) where T : Component {
-        Collider[] blocks = Physics.OverlapBox(detector.transform.position, extents , detector.transform.localRotation, mask);
+        Collider[] blocks = Physics.OverlapBox(detector.transform.position, extents / 2.0f, detector.transform.localRotation, mask);
 
 
         foreach (Collider c in blocks) {
