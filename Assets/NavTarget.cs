@@ -4,13 +4,8 @@ using UnityEngine;
 
 public class NavTarget : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+    public void OnDrawGizmos() {
+        Gizmos.color = Color.red;
+        Gizmos.DrawSphere(transform.position, 0.2f);
+    }
 }

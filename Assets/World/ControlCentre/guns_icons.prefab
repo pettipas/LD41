@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 4172785956032304}
   - component: {fileID: 33333290238702698}
   - component: {fileID: 23368948527576878}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: functional
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -38,7 +38,7 @@ GameObject:
   - component: {fileID: 4000309214800288}
   - component: {fileID: 95516106859604338}
   - component: {fileID: 114053583327248740}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: guns_icons
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -55,7 +55,7 @@ GameObject:
   - component: {fileID: 4888291798953736}
   - component: {fileID: 33857170290972436}
   - component: {fileID: 23844493363311476}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: red_icon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -69,7 +69,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1591463779001466}
   m_LocalRotation: {x: -0, y: 1, z: -0, w: 0}
-  m_LocalPosition: {x: 17.928894, y: 0.9799998, z: 2.5608015}
+  m_LocalPosition: {x: 9.361, y: 0.9799998, z: 3.7}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4888291798953736}
@@ -84,7 +84,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1463138665517426}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 8.58889, y: 0, z: -1.0591984}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4000309214800288}
@@ -97,7 +97,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1834827341526090}
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
-  m_LocalPosition: {x: 8.609, y: 0, z: -1.0591984}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4000309214800288}
