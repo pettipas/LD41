@@ -1,39 +1,53 @@
 fileFormatVersion: 2
-guid: ad88ae9edcf77bf4dbbc035b5079a5cf
-timeCreated: 1524354825
+guid: c63278abc6bad444db4242d24b11d674
+timeCreated: 1524369821
 licenseType: Free
 ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:
-    100000: //RootNode
-    100002: inside
-    100004: inside_background
-    100006: inside_background_1
-    100008: walls
-    100010: navmesh
-    400000: //RootNode
-    400002: inside
-    400004: inside_background
-    400006: inside_background_1
-    400008: walls
-    400010: navmesh
-    2100000: control_centre-material
-    2100002: No Name
-    2300000: inside
-    2300002: inside_background
-    2300004: inside_background_1
-    2300006: walls
-    2300008: navmesh
-    3300000: inside
-    3300002: inside_background
-    3300004: inside_background_1
-    3300006: walls
-    3300008: navmesh
-    4300000: inside
-    4300002: inside_background
-    4300004: inside_background_1
-    4300006: walls
-    4300008: navmesh
+    100000: Box
+    100002: Box_3
+    100004: Box_4
+    100006: Box_5
+    100008: //RootNode
+    100010: guy_idle
+    100012: guy_leftstep
+    100014: guy_rightstep
+    100016: wrench
+    400000: Box
+    400002: Box_3
+    400004: Box_4
+    400006: Box_5
+    400008: //RootNode
+    400010: guy_idle
+    400012: guy_leftstep
+    400014: guy_rightstep
+    400016: wrench
+    2100000: No Name
+    2300000: Box
+    2300002: Box_3
+    2300004: Box_4
+    2300006: Box_5
+    2300008: guy_idle
+    2300010: guy_leftstep
+    2300012: guy_rightstep
+    2300014: wrench
+    3300000: Box
+    3300002: Box_3
+    3300004: Box_4
+    3300006: Box_5
+    3300008: guy_idle
+    3300010: guy_leftstep
+    3300012: guy_rightstep
+    3300014: wrench
+    4300000: Box
+    4300002: Box_3
+    4300004: Box_4
+    4300006: Box_5
+    4300008: guy_idle
+    4300010: guy_rightstep
+    4300012: guy_leftstep
+    4300014: wrench
     9500000: //RootNode
   externalObjects: {}
   materials:

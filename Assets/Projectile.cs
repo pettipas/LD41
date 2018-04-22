@@ -7,6 +7,8 @@ public class Projectile : MonoBehaviour {
     public Vector3 direction;
     public float speed;
     public LayerMask blockMAsk;
+    public LayerMask enemyMask;
+
     public Vector3 extents = new Vector3(0.1f, 0.1f, 0.1f);
     public Vector3 startPosition;
     public void Update() {
@@ -19,6 +21,13 @@ public class Projectile : MonoBehaviour {
         }
 
         if (transform.position.z > 32) {
+            Destroy(this.gameObject);
+        }
+
+        Walker walker = this.Detect<Walker>(extents, enemyMask);
+
+        if (walker != null && !walker.Exploding) {
+            walker.Explode();
             Destroy(this.gameObject);
         }
     }

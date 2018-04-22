@@ -1,39 +1,33 @@
 fileFormatVersion: 2
-guid: ad88ae9edcf77bf4dbbc035b5079a5cf
-timeCreated: 1524354825
+guid: fc8879e9c9e44474ea232a0496b390ba
+timeCreated: 1524418573
 licenseType: Free
 ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:
-    100000: //RootNode
-    100002: inside
-    100004: inside_background
-    100006: inside_background_1
-    100008: walls
-    100010: navmesh
-    400000: //RootNode
-    400002: inside
-    400004: inside_background
-    400006: inside_background_1
-    400008: walls
-    400010: navmesh
-    2100000: control_centre-material
-    2100002: No Name
-    2300000: inside
-    2300002: inside_background
-    2300004: inside_background_1
-    2300006: walls
-    2300008: navmesh
-    3300000: inside
-    3300002: inside_background
-    3300004: inside_background_1
-    3300006: walls
-    3300008: navmesh
-    4300000: inside
-    4300002: inside_background
-    4300004: inside_background_1
-    4300006: walls
-    4300008: navmesh
+    100000: Box_6
+    100002: Box_7
+    100004: Box_8
+    100006: Box_9
+    100008: //RootNode
+    400000: Box_6
+    400002: Box_7
+    400004: Box_8
+    400006: Box_9
+    400008: //RootNode
+    2100000: No Name
+    2300000: Box_6
+    2300002: Box_7
+    2300004: Box_8
+    2300006: Box_9
+    3300000: Box_6
+    3300002: Box_7
+    3300004: Box_8
+    3300006: Box_9
+    4300000: Box_6
+    4300002: Box_7
+    4300004: Box_8
+    4300006: Box_9
     9500000: //RootNode
   externalObjects: {}
   materials:
