@@ -40,6 +40,7 @@ public class MarchingBehavior : MonoBehaviour {
                 signDirection *= -1;
                 Vector3 newPosition = transform.position + new Vector3(0, 0, stepdistance * -1);
                 transform.position = newPosition;
+                duratiuon -= 0.05f;
             }
             else if (positiveWalker != null
               && signDirection > 0) {
@@ -47,6 +48,7 @@ public class MarchingBehavior : MonoBehaviour {
                 signDirection *= -1;
                 Vector3 newPosition = transform.position + new Vector3(0, 0, stepdistance * -1);
                 transform.position = newPosition;
+                duratiuon -= 0.05f;
             }
             else {
                 transform.position += new Vector3(stepdistance * signDirection, 0, 0);

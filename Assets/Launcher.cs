@@ -16,14 +16,16 @@ public class Launcher : MonoBehaviour {
                 projectiles = new List<Projectile>();
             }
 
-            return projectiles.Count != 10;
+            return projectiles.Count != 3;
         }
     }
 
     public void Fire() {
-        Projectile proj = projectilePrefab.Duplicate(launchPoint.position);
-        projectiles.Add(proj);
-        proj.startPosition = this.transform.position; 
+        if (MaxInFlight) {
+            Projectile proj = projectilePrefab.Duplicate(launchPoint.position);
+            projectiles.Add(proj);
+            proj.startPosition = this.transform.position;
+        }
     }
 
     public void LateUpdate() {
