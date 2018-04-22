@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.Linq;
 
 public class TankControl : MonoBehaviour {
 
@@ -13,6 +14,15 @@ public class TankControl : MonoBehaviour {
     public NavTarget rightSide;
     public NavTarget wheelNorth;
     public NavTarget bulletBaySouth;
+
+    public List<NavTarget> targets = new List<NavTarget>();
+    public List<Icon> icons = new List<Icon>();
+
+    public void Awake() {
+
+        targets = FindObjectsOfType<NavTarget>().ToList();
+        icons = FindObjectsOfType<Icon>().ToList();
+    }
 
     public Guy cap;
 
@@ -37,6 +47,13 @@ public class TankControl : MonoBehaviour {
         if (Input.GetKeyDown(KeyCode.Alpha4)
          || Input.GetKeyDown(KeyCode.Keypad4)) {
             cap.GoTo(rightSide);
+        }
+    }
+
+    public void CauseProblem() {
+        Icon icon = icons.FindAll(x => !x.damaged).GetRandomElement();
+        if (icon != null) {
+
         }
     }
 }

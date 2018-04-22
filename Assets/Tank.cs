@@ -21,6 +21,8 @@ public class Tank : MonoBehaviour {
     public float coolDown;
     public float timeBeforeNext = 0.3f;
 
+    public TankControl controlTank;
+
     public bool ReadyToShoot {
         get {
             return coolDown >= timeBeforeNext;
@@ -34,6 +36,10 @@ public class Tank : MonoBehaviour {
             }
             return desiredSpeed;
         } 
+    }
+
+    public void CauseProblem() {
+        controlTank.CauseProblem();
     }
 
 	void Update () {

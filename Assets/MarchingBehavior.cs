@@ -57,6 +57,21 @@ public class MarchingBehavior : MonoBehaviour {
                 for (int i = 0; i < walkers.Count; i++) {
                     if (walkers[i] != null) walkers[i].TakeStep();
                 }
+                walkers.RemoveAll(x => x == null);
+                Walker walker = walkers.GetRandomElement();
+
+                if (walker != null) {
+                    Projectile proj = alienShot.Duplicate(walker.transform.position);
+                    proj.startPosition = walker.transform.position;
+
+                    List<Walker> excludes = new List<Walker>();
+                    excludes.Add(walker);
+                    Walker walker2 = walkers.GetRandomElementExcluding(excludes);
+                    if (walker2 != null) {
+                        Projectile proj2 = alienShot.Duplicate(walker2.transform.position);
+                        proj2.startPosition = walker2.transform.position;
+                    }
+                }
             }
         }
 

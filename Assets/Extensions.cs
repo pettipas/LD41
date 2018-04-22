@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -237,7 +238,7 @@ public static class Extensions {
 	}
 	
 	public static T GetRandomElement<T>(this IEnumerable<T> list) {
-		if (list.Count() == 0)
+        if (list.Count() == 0)
 			return default(T);
 		return list.ElementAt(localRandom.Next(list.Count()));
 	}

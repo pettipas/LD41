@@ -25,9 +25,16 @@ public class Projectile : MonoBehaviour {
         }
 
         Walker walker = this.Detect<Walker>(extents, enemyMask);
+        Tank tank = this.Detect<Tank>(extents, enemyMask);
+
 
         if (walker != null && !walker.Exploding) {
             walker.Explode();
+            Destroy(this.gameObject);
+        }
+
+        if (tank != null) {
+            tank.CauseProblem();
             Destroy(this.gameObject);
         }
     }
