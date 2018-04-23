@@ -24,6 +24,12 @@ public class TankControl : MonoBehaviour {
         icons = FindObjectsOfType<Icon>().ToList();
     }
 
+    public bool GameOver {
+        get {
+            return icons.FindAll(x => !x.damaged).Count == 0;
+        }
+    }
+
     public Guy cap;
 
     public void Update() {
