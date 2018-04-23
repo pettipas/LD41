@@ -10,7 +10,9 @@ public class MarchingBehavior : MonoBehaviour {
 
     public float stepdistance;
     public float waitTime;
-    public AudioSource stepSound;
+    public AudioClip stepSound;
+    public AudioClip stepSound2;
+    public AudioClip shootSound;
     public float signDirection = -1;
 
     public Vector3 halfExtents;
@@ -22,7 +24,7 @@ public class MarchingBehavior : MonoBehaviour {
 
     public float duratiuon;
     public float countUpToDuration;
-    
+    public float countDown;
     public List<Walker> walkers = new List<Walker>();
 
     public void Awake() {
@@ -31,7 +33,7 @@ public class MarchingBehavior : MonoBehaviour {
     }
 
     Vector3 velocityForDamp;
-
+    bool flip = false;
     public void Update() {
 
         if (countUpToDuration >= duratiuon) {
@@ -45,7 +47,10 @@ public class MarchingBehavior : MonoBehaviour {
                 signDirection *= -1;
                 Vector3 newPosition = transform.position + new Vector3(0, 0, stepdistance * -1);
                 transform.position = newPosition;
-                duratiuon -= 0.05f;
+                duratiuon -= countDown;
+
+                PLayStepSound();
+                Shoot();
             }
             else if (positiveWalker != null
               && signDirection > 0) {
@@ -53,32 +58,44 @@ public class MarchingBehavior : MonoBehaviour {
                 signDirection *= -1;
                 Vector3 newPosition = transform.position + new Vector3(0, 0, stepdistance * -1);
                 transform.position = newPosition;
-                duratiuon -= 0.05f;
+                duratiuon -= countDown;
+
+                PLayStepSound();
+                Shoot();
             }
             else {
                 transform.position += new Vector3(stepdistance * signDirection, 0, 0);
                 for (int i = 0; i < walkers.Count; i++) {
                     if (walkers[i] != null) walkers[i].TakeStep();
                 }
-                walkers.RemoveAll(x => x == null);
-                Walker walker = walkers.GetRandomElement();
 
-                if (walker != null) {
-                    Projectile proj = alienShot.Duplicate(walker.transform.position);
-                    proj.startPosition = walker.transform.position;
-
-                    List<Walker> excludes = new List<Walker>();
-                    excludes.Add(walker);
-                    Walker walker2 = walkers.GetRandomElementExcluding(excludes);
-                    if (walker2 != null) {
-                        Projectile proj2 = alienShot.Duplicate(walker2.transform.position);
-                        proj2.startPosition = walker2.transform.position;
-                    }
-                }
+                PLayStepSound();
+                Shoot();
             }
         }
 
         countUpToDuration += Time.smoothDeltaTime;
+    }
+
+    public void PLayStepSound() {
+        if (flip) {
+            MarchingBehavior.Instance.GetComponent<AudioSource>().PlayOneShot(stepSound);
+        }else {
+            MarchingBehavior.Instance.GetComponent<AudioSource>().PlayOneShot(stepSound2);
+        }
+        flip = !flip;
+    }
+
+    public void Shoot() {
+        walkers.RemoveAll(x => x == null);
+       
+
+        for (int i = 0; i < walkers.Count; i++) {
+            if (Random.value > 0.9) {
+                Projectile proj = alienShot.Duplicate(walkers[i].transform.position);
+                proj.startPosition = walkers[i].transform.position;
+            }
+        }
     }
 
     public void LateUpdate() {

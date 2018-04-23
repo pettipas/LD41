@@ -3263,6 +3263,7 @@ MonoBehaviour:
   targets: []
   icons: []
   problemSound: {fileID: 8300000, guid: 17d2555b7592e7c45ab343c0cdd920ed, type: 3}
+  buttonHit: {fileID: 8300000, guid: c18612f68fe68f143b3ce3c1a7890330, type: 3}
   cap: {fileID: 1833257300}
 --- !u!1001 &542432180
 Prefab:
@@ -3992,10 +3993,10 @@ MonoBehaviour:
   - {fileID: 798885518}
   - {fileID: 1962475520}
   - {fileID: 14346623}
-  speed: 8
+  speed: 5
   speedLastFrame: 0
-  desiredSpeed: 4
-  spinOutSpeed: 6
+  desiredSpeed: 3
+  spinOutSpeed: 5
   directionFlipped: 0
   signOfLastSpeed: 0
   spinOutDuration: 1
@@ -5366,9 +5367,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3539189a7bdde34ea1d0db64d2839a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stepdistance: 0.25
+  stepdistance: 0.5
   waitTime: 0
-  stepSound: {fileID: 0}
+  stepSound: {fileID: 8300000, guid: 443e7d43062cde04d869510a85abdf18, type: 3}
+  stepSound2: {fileID: 8300000, guid: b0d749b87204d0d49b2f2c8299ed7533, type: 3}
+  shootSound: {fileID: 8300000, guid: 7694984e3550ca8458a25087d9116e8d, type: 3}
   signDirection: -1
   halfExtents: {x: 1, y: 4, z: 32}
   negativeBumper: {fileID: 232072797}
@@ -5380,6 +5383,7 @@ MonoBehaviour:
     type: 2}
   duratiuon: 1
   countUpToDuration: 0
+  countDown: 0.05
   walkers: []
 --- !u!82 &879026110
 AudioSource:
@@ -5392,13 +5396,13 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.12
   m_Pitch: 1
   Loop: 0
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
-  Priority: 128
+  Priority: 204
   DopplerLevel: 1
   MinDistance: 1
   MaxDistance: 500

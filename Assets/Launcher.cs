@@ -6,7 +6,7 @@ public class Launcher : MonoBehaviour {
 
     public Projectile projectilePrefab;
     public Transform launchPoint;
-
+    public AudioClip shoot;
     public List<Projectile> projectiles = new List<Projectile>();
 
     public bool MaxInFlight {
@@ -22,6 +22,7 @@ public class Launcher : MonoBehaviour {
 
     public void Fire() {
         if (MaxInFlight) {
+            MarchingBehavior.Instance.GetComponent<AudioSource>().PlayOneShot(shoot);
             Projectile proj = projectilePrefab.Duplicate(launchPoint.position);
             projectiles.Add(proj);
             proj.startPosition = this.transform.position;

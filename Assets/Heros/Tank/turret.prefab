@@ -155,4 +155,5 @@ MonoBehaviour:
   projectilePrefab: {fileID: 114902546138875222, guid: b6c99d1be3f381b408c39cda517b64e7,
     type: 2}
   launchPoint: {fileID: 4561909466665290}
+  shoot: {fileID: 8300000, guid: 2ce7a53534653e94b8400d8616802792, type: 3}
   projectiles: []

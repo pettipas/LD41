@@ -18,7 +18,7 @@ public class TankControl : MonoBehaviour {
     public List<NavTarget> targets = new List<NavTarget>();
     public List<Icon> icons = new List<Icon>();
     public AudioClip problemSound;
-
+    public AudioClip buttonHit;
     public void Awake() {
         targets = FindObjectsOfType<NavTarget>().ToList();
         icons = FindObjectsOfType<Icon>().ToList();
@@ -32,21 +32,25 @@ public class TankControl : MonoBehaviour {
             || Input.GetKeyDown(KeyCode.Keypad1)) {
 
             cap.GoTo(wheelNorth);
+            MarchingBehavior.Instance.GetComponent<AudioSource>().PlayOneShot(buttonHit);
         }
 
         if (Input.GetKeyDown(KeyCode.Alpha2)
          || Input.GetKeyDown(KeyCode.Keypad2)) {
             cap.GoTo(bulletBaySouth);
+            MarchingBehavior.Instance.GetComponent<AudioSource>().PlayOneShot(buttonHit);
         }
 
         if (Input.GetKeyDown(KeyCode.Alpha3)
          || Input.GetKeyDown(KeyCode.Keypad3)) {
             cap.GoTo(leftSide);
+            MarchingBehavior.Instance.GetComponent<AudioSource>().PlayOneShot(buttonHit);
         }
 
         if (Input.GetKeyDown(KeyCode.Alpha4)
          || Input.GetKeyDown(KeyCode.Keypad4)) {
             cap.GoTo(rightSide);
+            MarchingBehavior.Instance.GetComponent<AudioSource>().PlayOneShot(buttonHit);
         }
     }
 
