@@ -17,9 +17,9 @@ public class TankControl : MonoBehaviour {
 
     public List<NavTarget> targets = new List<NavTarget>();
     public List<Icon> icons = new List<Icon>();
+    public AudioClip problemSound;
 
     public void Awake() {
-
         targets = FindObjectsOfType<NavTarget>().ToList();
         icons = FindObjectsOfType<Icon>().ToList();
     }
@@ -53,7 +53,8 @@ public class TankControl : MonoBehaviour {
     public void CauseProblem() {
         Icon icon = icons.FindAll(x => !x.damaged).GetRandomElement();
         if (icon != null) {
-
+            MarchingBehavior.Instance.GetComponent<AudioSource>().PlayOneShot(problemSound);
+            icon.damaged = true;
         }
     }
 }

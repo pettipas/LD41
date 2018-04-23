@@ -212,3 +212,5 @@ MonoBehaviour:
   stepTwo: {fileID: 23977814622413068}
   explosion: {fileID: 114117369874258114, guid: 95e8e1aeff8b9624bae772009cdc6cfa,
     type: 2}
+  sound: {fileID: 0}
+  clip: {fileID: 8300000, guid: 2990ed88c5b9d3c48991a425cbc8729f, type: 3}

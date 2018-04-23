@@ -8,6 +8,7 @@ public class Projectile : MonoBehaviour {
     public float speed;
     public LayerMask blockMAsk;
     public LayerMask enemyMask;
+    public AudioClip blockBreak;
 
     public Vector3 extents = new Vector3(0.1f, 0.1f, 0.1f);
     public Vector3 startPosition;
@@ -16,6 +17,7 @@ public class Projectile : MonoBehaviour {
         BlockShard shard = this.Detect<BlockShard>(extents, blockMAsk, startPosition);
      
         if (shard != null) {
+            MarchingBehavior.Instance.GetComponent<AudioSource>().PlayOneShot(blockBreak);
             Destroy(shard.gameObject);
             Destroy(this.gameObject);
         }

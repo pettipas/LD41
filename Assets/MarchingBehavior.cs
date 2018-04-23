@@ -6,6 +6,8 @@ using System.Linq;
 
 public class MarchingBehavior : MonoBehaviour {
 
+    public static MarchingBehavior Instance;
+
     public float stepdistance;
     public float waitTime;
     public AudioSource stepSound;
@@ -20,11 +22,12 @@ public class MarchingBehavior : MonoBehaviour {
 
     public float duratiuon;
     public float countUpToDuration;
-
+    
     public List<Walker> walkers = new List<Walker>();
 
     public void Awake() {
         walkers = GameObject.FindObjectsOfType<Walker>().ToList();
+        Instance = this;
     }
 
     Vector3 velocityForDamp;
